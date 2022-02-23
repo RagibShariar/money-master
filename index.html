@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fonts -->
+    <!-- CSS files -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>1Money Calculator</title>
+</head>
+
+<body>
+
+    <main>
+        <section>
+            <div class="container">
+                <h1 class="mb-5 mt-4 text-center "><span class="text-info text-decoration-underline">1Money</span> Calculator</h1>
+                <div class="row ">
+                    <div class="col-md-6 mb-4">
+                        <img class="img-fluid" src="img/money.jpg" alt="">
+                    </div>
+                    <div class="col-md-6 mb-4">
+                        <div class="form-wrapper text-md-center py-4 px-2  shadow">
+                            <!-- Expenses and balance part -->
+                            <h4 class="mb-4 text-center">Income</h4>
+                            <label>Income:</label>
+                            <input type="number" id="income" class="input_field" placeholder="Your Monthly Income">
+                            
+                            <h4 class="mb-4 text-center">Expences</h4>
+                            <label>Food:</label>
+                            <input type="number" id="food" class="input_field" placeholder="Monthly Food Costs">
+                            <br>
+
+                            <label>Rent:</label>
+                            <input type="number" id="rent" class="input_field" placeholder="Monthly House Rents">
+                            <br>
+
+                            <label>Cloths:</label>
+                            <input type="number" id="cloths" class="input_field" placeholder="Monthly Cloth Costs">
+                            <br>
+
+                            <p class="notify text-danger"><span id="error-msg" ></span></p>
+
+                            <button onclick="calculateCost()" id="calculate-btn" class="mt-2 mb-4 btn btn-primary btn-custom d-block m-auto">Calculate</button>
+                            <h4 class="mb-4 text-center">Total Expenses: <span id="expenses">0</span> </h4>
+                            <h4 class="mb-4 text-center">Balance: <span id="balance">0</span></h4>
+
+                            <!-- savings and remaining balance part -->
+                            <div class="mt-5 mb-4">
+                            <label>Save:</label>
+                            <input type="number" id="savings-input" class="savings-input">
+                            <span class="px-md-3 px-2">%</span>
+                            <button onclick="calculateSavings()" id="savings-btn" class="btn btn-primary btn-custom">Save</button>
+                            </div>
+                            <p class="notify text-danger"><span id="error-msg" ></span></p>
+                                   
+                            <h4 class="mb-4 text-center">Saving Amount: <span id="savings-amount">0</span></h4>
+                            <h4 class="mb-4 text-center">Remaining Balance: <span id="remaining-balance">0</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- js files -->
+    <!-- <script src="js/script.js"></script> -->
+    <script src="js/app.js"></script>
+</body>
+
+</html>
